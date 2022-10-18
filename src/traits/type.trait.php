@@ -1,14 +1,17 @@
 <?php
+//  namespace Trait;
 
-trait Type {
+trait TypeTrait {
 
     protected int $id;
     protected string $name;
+
 
     public function __construct(int $id, string $name) {
         $this->setId($id);
         $this->setName($name);
     }
+
 
     /**
      * Get the value of id.

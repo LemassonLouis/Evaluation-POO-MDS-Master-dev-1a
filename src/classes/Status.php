@@ -1,7 +1,7 @@
 <?php
 
+// use Trait\TypeTrait;
+
 class Status {
-
-    use Type;
-
+    use TypeTrait;
 }

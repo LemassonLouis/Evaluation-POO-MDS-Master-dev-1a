@@ -6,7 +6,7 @@ abstract class Person {
     protected string $lastName;
     protected string $firstName;
 
-    
+
     public function __construct(int $id, string $lastName, string $firstName) {
         $this->setId($id);
         $this->setLastName($lastName);

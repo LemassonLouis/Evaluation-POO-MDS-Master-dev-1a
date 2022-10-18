@@ -1,7 +1,7 @@
 <?php
 
+// use Trait\TypeTrait;
+
 class Field {
-
-    use Type;
-
+    use TypeTrait;
 }
