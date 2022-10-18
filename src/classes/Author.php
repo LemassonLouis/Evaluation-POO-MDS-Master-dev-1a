@@ -15,9 +15,7 @@ class Author extends Person {
     use PhoneTrait;
 
     public function __construct(int $id, string $lastName, string $firstName, string $email, int $phone) {
-        $this->setId($id);
-        $this->setLastName($lastName);
-        $this->setFirstName($firstName);
+        parent::__construct($id, $lastName, $firstName);
         $this->setEmail($email);
         $this->setPhone($phone);
     }
