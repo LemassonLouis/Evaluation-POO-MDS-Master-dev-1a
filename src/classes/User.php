@@ -2,13 +2,13 @@
 
 namespace Classes;
 
-use Trait\ArtworkTrait;
+use Trait\ArtworksTrait;
 use Trait\EmailTrait;
 
 class User extends Person {
 
     use EmailTrait;
-    use ArtworkTrait;
+    use ArtworksTrait;
 
 
     public function __construct(int $id, string $lastName, string $firstName, string $email, array $artworks) {

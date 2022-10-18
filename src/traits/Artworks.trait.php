@@ -5,7 +5,7 @@ namespace Trait;
 use Classes\Artwork;
 use Exception;
 
-trait ArtworkTrait {
+trait ArtworksTrait {
     
     /**
      * @var array<Artwork>

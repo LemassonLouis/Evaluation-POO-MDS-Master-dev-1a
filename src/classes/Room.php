@@ -1,10 +1,12 @@
 <?php
 
-use Trait\ArtworkTrait;
+namespace Classes;
+
+use Trait\ArtworksTrait;
 
 class Room {
 
-    use ArtworkTrait;
+    use ArtworksTrait;
 
 
     private int $id;
