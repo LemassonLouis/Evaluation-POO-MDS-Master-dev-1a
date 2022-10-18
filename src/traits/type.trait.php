@@ -5,7 +5,7 @@ trait Type {
     protected int $id;
     protected string $name;
 
-    function __construct(int $id, string $name) {
+    public function __construct(int $id, string $name) {
         $this->setId($id);
         $this->setName($name);
     }
@@ -15,7 +15,7 @@ trait Type {
      *
      * @return integer
      */
-    function getId(): int {
+    public function getId(): int {
         return $this->id;
     }
 
@@ -34,7 +34,7 @@ trait Type {
      *
      * @return string
      */
-    function getName(): string {
+    public function getName(): string {
         return $this->name;
     }
 
