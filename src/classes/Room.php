@@ -13,7 +13,10 @@ class Room {
 
     
     public function __construct(int $id, string $name, bool $isCinemaRoom = false, array $artworks) {
-        
+        $this->setId($id);
+        $this->setName($name);
+        $this->setIsCinemaRoom($isCinemaRoom);
+        $this->setArtworks($artworks);
     }
 
 
@@ -67,7 +70,7 @@ class Room {
      *
      * @param bool $isCinemaRoom
      */ 
-    public function setIsCinemaRoom(bool $isCinemaRoom): void {
+    private function setIsCinemaRoom(bool $isCinemaRoom): void {
         $this->isCinemaRoom = $isCinemaRoom;
     }
 
