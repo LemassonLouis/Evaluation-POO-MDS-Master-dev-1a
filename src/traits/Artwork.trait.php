@@ -1,6 +1,9 @@
 <?php
 
-// namespace Trait;
+namespace Trait;
+
+use Classes\Artwork;
+use Exception;
 
 trait ArtworkTrait {
     

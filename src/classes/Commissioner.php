@@ -1,5 +1,9 @@
 <?php
 
+namespace Classes;
+
+use Trait\PhoneTrait;
+
 class Commissioner extends Person {
 
     use PhoneTrait;

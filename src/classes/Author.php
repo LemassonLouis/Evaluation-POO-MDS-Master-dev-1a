@@ -1,13 +1,10 @@
 <?php
 
-// require_once("Person.php");
-// require_once("traits/Email.trait.php");
-// require_once("traits/Phone.trait.php");
-// require_once("traits/Artwork.trait.php");
+namespace Classes;
 
-// use Trait\EmailTrait;
-// use Trait\PhoneTrait;
-// use Trait\ArtworkTrait;
+use Trait\EmailTrait;
+use Trait\PhoneTrait;
+use Trait\ArtworkTrait;
 
 class Author extends Person {
 

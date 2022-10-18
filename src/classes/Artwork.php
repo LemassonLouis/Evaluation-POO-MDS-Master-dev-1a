@@ -1,5 +1,9 @@
 <?php
 
+namespace Classes;
+
+use Exception;
+
 class Artwork {
     
     private string $code;

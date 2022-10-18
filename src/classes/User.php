@@ -1,5 +1,10 @@
 <?php
 
+namespace Classes;
+
+use Trait\ArtworkTrait;
+use Trait\EmailTrait;
+
 class User extends Person {
 
     use EmailTrait;

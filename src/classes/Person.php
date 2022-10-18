@@ -1,5 +1,7 @@
 <?php
 
+namespace Classes;
+
 abstract class Person {
     
     protected int $id;

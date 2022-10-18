@@ -1,6 +1,8 @@
 <?php
 
-// use Trait\TypeTrait;
+namespace Classes;
+
+use Trait\TypeTrait;
 
 class Field {
     use TypeTrait;
