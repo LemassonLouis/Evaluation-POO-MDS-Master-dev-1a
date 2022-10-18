@@ -26,7 +26,7 @@ trait ArtworksTrait {
      * Get an artwork from the artworks array.
      *
      * @param string $code
-     * @return void
+     * @return Artwork|null
      */
     public function getArtwork(string $code): ?Artwork {
         foreach($this->artworks as $artwork) {

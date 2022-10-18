@@ -77,6 +77,12 @@ class Artwork {
         return $this->fields;
     }
 
+    /**
+     * Get a field.
+     *
+     * @param integer $id
+     * @return Field|null
+     */
     public function getField(int $id): ?Field {
         foreach($this->fields as $field) {
             if($field->getId() == $id) return $field;
