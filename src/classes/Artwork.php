@@ -9,11 +9,11 @@ class Artwork {
      */
     private array $fields;
     // On aurait pu imaginer plusieurs auteurs
-    private Author $author;
+    private ?Author $author;
     // On aurait pu imaginer plusieurs propriétaires
-    private Person $owner;
+    private ?Person $owner;
     // On autait pu immaginer plusieurs statuts
-    private Status $status;
+    private ?Status $status;
     
 
     public function __construct(string $code, string $description, array $fields = [], ?Author $author = null, ?Person $owner = null, ?Status $status = null) {
