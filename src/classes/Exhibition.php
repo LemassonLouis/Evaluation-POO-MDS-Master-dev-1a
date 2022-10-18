@@ -74,4 +74,7 @@ class Exhibition {
         $this->commissioner = $commissioner;
     }
 
+    // Il va me manquer l'ajout d'oeuvre dans une salle (ou cas rare sans salle)
+    // Avec verification du status (et modification de celui-ci)
+
 }

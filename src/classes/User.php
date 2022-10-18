@@ -31,10 +31,10 @@ class User extends Person implements ArtworkInterface {
                 throw new Exception("This artwork is not available to take");
             }
 
-            // Il va me manquer la varification du poid si c'est une sculpture
+            // Il va me manquer la verification du poid si c'est une sculpture
 
             $this->artworks[] = $artwork;
-            
+            // Il va me manquer le changement de statut vers "emprunté"
         }
         catch (Exception $e) {
             echo $e;

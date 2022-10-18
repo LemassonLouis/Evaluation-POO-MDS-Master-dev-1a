@@ -54,11 +54,10 @@ trait ArtworksTrait {
     public function addArtwork(Artwork $artwork): void {
         try {
             if(!in_array($artwork, $this->artworks)) {
-                $this->artworks[] = $artwork;
-            }
-            else {
                 throw new Exception('This artwork is already part of the room/already belongs to this person');
             }
+
+            $this->artworks[] = $artwork;
         }
         catch (Exception $e) {
             echo $e;
@@ -74,11 +73,11 @@ trait ArtworksTrait {
     public function removeArtwork(Artwork $artwork): void {
         try {
             if(in_array($artwork, $this->artworks)) {
-                array_splice($this->artworks, array_search($artwork, $this->artworks), 1);
-            }
-            else {
                 throw new Exception('This artwork does not part of the room/does not belongs to this person');
             }
+
+            array_splice($this->artworks, array_search($artwork, $this->artworks), 1);
+            // Il va me manquer le changement de status vers "stocké"
         }
         catch (Exception $e) {
             echo $e;

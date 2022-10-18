@@ -2,9 +2,11 @@
 
 namespace Classes;
 
+use Exception;
+use Interfaces\ArtworkInterface;
 use Trait\ArtworksTrait;
 
-class Room {
+class Room implements ArtworkInterface {
 
     use ArtworksTrait;
 
@@ -76,4 +78,30 @@ class Room {
         $this->isCinemaRoom = $isCinemaRoom;
     }
 
+
+    public function addArtwork(Artwork $artwork): void {
+        try {
+            if(in_array($artwork, $this->artworks)) {
+                throw new Exception('This artwork is already part of the room/already belongs to this person');
+            }
+
+            // Il va me manquer la vérification du status de l'oeuvre
+
+            $fieldsName = [];
+            foreach($artwork->getFields() as $field){
+                $fieldsName[] = $field->getName();
+            }
+
+            if((in_array("Film", $fieldsName) && !$this->getIsCinemaRoom()) || (!in_array("Film", $fieldsName) && $this->getIsCinemaRoom())) {
+                throw new Exception("This artwork is not available to take place in this room");
+            }
+
+            $this->artworks[] = $artwork;
+            // Il va ma manquer le changement de status vers "exposé"
+        }
+        catch (Exception $e) {
+            echo $e;
+        }
+    }
+    
 }
